@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0f0f0f;
+  border-bottom: 2px solid #aaff00;
+  flex-wrap: wrap;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.brand-name {
+  color: #aaff00;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #bbb;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #aaff00;
+  transform: scale(1.1);
+}
+
+/* HERO */
+.hero {
+  background: url("dirtrallyworks7.jpg") center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero h1 {
+  color: #aaff00;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #aaff00;
+  color: #111;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #d4ff00;
+  transform: scale(1.05);
+}
+
+/* ABOUT */
+.about {
+  background-color: #0f0f0f;
+  color: #ccc;
+  text-align: center;
+  padding: 80px 20px;
+  border-top: 2px solid #aaff00;
+  border-bottom: 2px solid #aaff00;
+}
+
+.about h2 {
+  color: #aaff00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #111;
+}
+
+.gallery h2 {
+  color: #aaff00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  filter: brightness(0.9);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.07);
+  filter: brightness(1);
+  box-shadow: 0 0 15px #aaff00;
+}
+
+/* CONTACT SECTION */
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #aaff00;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.contact-section {
+  margin-bottom: 60px; /* jarak antar blok */
+}
+
+.contact-section h3 {
+  color: #aaff00;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* FLEX GRID UNTUK LOGO */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+/* LOGO STYLE (disesuaikan agar pas di lingkaran) */
+.social-logo {
+  width: 70px;
+  height: 70px;
+  background-color: #aaff00;
+  border-radius: 50%;
+  padding: 5px; /* lebih kecil dari sebelumnya agar logo lebih besar */
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #aaff00;
+}
+
+/* Efek hover glow */
+.social-logo:hover {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 0 20px #d4ff00, 0 0 40px #aaff00;
+}
+
+/* Untuk mobile */
+@media (max-width: 600px) {
+  .social-logo {
+    width: 55px;
+    height: 55px;
+    padding: 4px;
+  }
+}
+
+
+/* Penyesuaian ukuran logo per platform biar proporsional di lingkaran */
+
+/* Facebook – agak ramping, bisa diperbesar */
+.social-logo.facebook {
+  padding: 2px;
+  transform: scale(1.1);
+}
+
+/* TikTok – biasanya kecil di tengah */
+.social-logo.tiktok {
+  padding: 1px;
+  transform: scale(1.2);
+}
+
+/* Gmail – sering ada area putih di sekeliling */
+.social-logo.gmail {
+  padding: 1px;
+  transform: scale(1.15);
+}
+
+/* WhatsApp – biasanya pas, tapi bisa sedikit diperbesar */
+.social-logo.whatsapp {
+  padding: 2px;
+  transform: scale(1.1);
+}
+
+/* =======================================
+   STYLING BACK LINK (Centering Fixed)
+   ======================================= */
+
+.back-link {
+    /* FIX CENTERING: Diubah menjadi elemen block dengan lebar sesuai konten */
+    display: block; 
+    width: fit-content; /* Membatasi lebar hanya seukuran konten */
+    
+    /* Centering dilakukan dengan margin auto */
+    margin: 60px auto 60px auto; 
+
+    /* Gaya Tombol (Ala Porsche/Dirtrallyworks) */
+    text-transform: uppercase; 
+    font-weight: 700; 
+    letter-spacing: 1px;
+    
+    /* Warna dan Padding */
+    padding: 12px 30px;
+    background-color: #aaff00; 
+    color: #111; 
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem; 
+    
+    /* Efek Transisi */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #d4ff00; 
+    transform: translateY(-2px) scale(1.02); 
+    box-shadow: 0 5px 15px rgba(170, 255, 0, 0.4); 
+}
+
+/* =======================================
+   STYLING MODAL/LIGHTBOX
+   ======================================= */
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 200; 
+  padding-top: 50px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.95); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 900px; 
+  max-height: 90vh; 
+  object-fit: contain; 
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 201; 
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #aaff00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+.modal-content {
+  animation: zoom 0.3s;
+}
