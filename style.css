@@ -179,6 +179,101 @@ body {
   box-shadow: 0 0 15px #aaff00;
 }
 
+/* =======================================
+   STYLING REVISI GALLERY: Tampilan Kartu Ala Porsche
+   (Tambahkan kode ini ke file style.css Anda)
+   ======================================= */
+
+/* Container untuk Kartu Galeri (Menggantikan .gallery-navigation) */
+.gallery-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gaya Kartu (Mirip elemen Porsche Discover) */
+.gallery-card {
+    display: block; 
+    position: relative;
+    width: 30%; /* Mengatur lebar untuk 3 kartu dengan sisa ruang */
+    max-width: 380px;
+    height: 450px; 
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    /* Efek bayangan hijau Dirtrallyworks saat di-hover */
+    box-shadow: 0 10px 20px rgba(170, 255, 0, 0.4); 
+}
+
+/* Gambar Latar Belakang Kartu */
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .card-image {
+    transform: scale(1.05); /* Zoom in saat di-hover */
+}
+
+/* Overlay Gelap di Kartu (Untuk Keterbacaan Teks) */
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Gradien dari bawah ke atas agar tulisan terbaca */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+}
+
+/* Konten Teks di Atas Overlay */
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: left;
+    z-index: 2;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.card-link {
+    color: #aaff00; /* Teks tautan hijau neon */
+    font-weight: 500;
+    display: block;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+/* RESPONSIVE: Susun Vertikal di layar kecil */
+@media (max-width: 768px) {
+    .gallery-cards {
+        flex-direction: column; /* Menyusun kartu ke bawah */
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .gallery-card {
+        width: 90%; /* Ambil hampir seluruh lebar layar */
+        height: 300px;
+        max-width: none;
+    }
+}
+
 /* CONTACT SECTION */
 #contact {
   text-align: center;
