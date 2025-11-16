@@ -306,6 +306,7 @@ body {
   letter-spacing: 1px;
 }
 
+
 /* FLEX GRID UNTUK LOGO */
 .social-icons {
   display: flex;
@@ -315,20 +316,20 @@ body {
 }
 /* LOGO STYLE (disesuaikan agar pas di lingkaran) */
 .social-logo {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   background-color: #aaff00;
-  border-radius: 50%;
+  border-radius: 25%;
   padding: 5px; /* lebih kecil dari sebelumnya agar logo lebih besar */
   object-fit: contain;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px #aaff00;
+  box-shadow: 0 0 2px #aaff00;
 }
 
 /* Efek hover glow */
 .social-logo:hover {
   transform: scale(1.15) translateY(-5px);
-  box-shadow: 0 0 20px #d4ff00, 0 0 40px #aaff00;
+  box-shadow: 0 0 10px #d4ff00, 0 0 20px #aaff00;
 }
 
 /* Untuk mobile */
@@ -336,36 +337,10 @@ body {
   .social-logo {
     width: 55px;
     height: 55px;
-    padding: 4px;
+    padding: 2px;
   }
 }
 
-
-/* Penyesuaian ukuran logo per platform biar proporsional di lingkaran */
-
-/* Facebook – agak ramping, bisa diperbesar */
-.social-logo.facebook {
-  padding: 2px;
-  transform: scale(1.1);
-}
-
-/* TikTok – biasanya kecil di tengah */
-.social-logo.tiktok {
-  padding: 1px;
-  transform: scale(1.2);
-}
-
-/* Gmail – sering ada area putih di sekeliling */
-.social-logo.gmail {
-  padding: 1px;
-  transform: scale(1.15);
-}
-
-/* WhatsApp – biasanya pas, tapi bisa sedikit diperbesar */
-.social-logo.whatsapp {
-  padding: 2px;
-  transform: scale(1.1);
-}
 
 /* =======================================
    STYLING BACK LINK (Centering Fixed)
